@@ -3,6 +3,7 @@ import {
   getUserWorkouts,
   addWorkoutToUser,
   markWorkoutCompleted,
+  deleteWorkoutFromUser,
 } from "../controllers/userWorkouts.js";
 
 const router = express.Router();
@@ -13,5 +14,7 @@ router.get("/userWorkouts/:userId", getUserWorkouts);
 router.post("/userWorkouts", addWorkoutToUser);
 // mark a workout as completed
 router.put("/userWorkouts/complete", markWorkoutCompleted);
+// delete a workout from a user
+router.delete("/userWorkouts/:userId/:exerciseId", deleteWorkoutFromUser)
 
 export default router;

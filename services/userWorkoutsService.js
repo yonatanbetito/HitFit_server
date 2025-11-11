@@ -1,8 +1,6 @@
 import fs from "fs/promises";
 
 const userWorkoutsPath = "data/userWorkouts.json";
-;
-
 // get workouts for a specific user
 export async function getWorkoutsByUserId(userId) {
   try {
@@ -73,8 +71,30 @@ export async function markWorkoutCompleted(userId, exerciseId) {
   }
 }
 
+// delete a workout from a user
+export async function deleteWorkoutFromUser(userId, exerciseId) {
+  try {
+    const data = await fs.readFile(userWorkoutsPath, "utf8");
+    const userWorkouts = JSON.parse(data);
+
+    if (!userWorkouts[String(userId)]) {
+      throw new Error("User not found");
+    }
+
+    userWorkouts[String(userId)] = userWorkouts[String(userId)].filter(
+      (workout) => String(workout.exerciseId) !== String(exerciseId)
+    );
+
+    await fs.writeFile(userWorkoutsPath, JSON.stringify(userWorkouts, null, 2));
+  } catch (error) {
+    console.error("Error deleting workout from user:", error);
+    throw error;
+  }
+}
+
 export default {
   getWorkoutsByUserId,
   addWorkoutToUser,
   markWorkoutCompleted,
+  deleteWorkoutFromUser,
 };

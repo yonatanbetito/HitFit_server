@@ -39,4 +39,15 @@ export async function markWorkoutCompleted(req, res) {
   }
 }
 
-export default { getUserWorkouts, addWorkoutToUser, markWorkoutCompleted };
+// delete a workout from a user
+export async function deleteWorkoutFromUser(req, res) {
+  try {
+    const { userId, exerciseId } = req.params;
+    await userWorkoutsService.deleteWorkoutFromUser(userId, exerciseId);
+    res.status(204).end();
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+}
+
+export default { getUserWorkouts, addWorkoutToUser, markWorkoutCompleted, deleteWorkoutFromUser };
