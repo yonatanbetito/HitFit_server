@@ -1,28 +1,29 @@
-[{
-      "id": 1,
-      "name": "Yonatan",
-      "age": 25,
-      "height": 176,
-      "weight": 80,
-      "email": "yonatan@gmail.com",
-      "password": "1111"
-    },
-    {
-      "id": 2,
-      "name": "Sarah",
-      "age": 28,
-      "height": 165,
-      "weight": 60,
-      "email": "sarah@gmail.com",
-      "password": "1111"
-    },
-    {
-      "id": 3,
-      "name": "David",
-      "age": 30,
-      "height": 180,
-      "weight": 75,
-      "email": "david@gmail.com",
-      "password": "1111"
-    }
-  ]
+[
+  {
+    "id": 1,
+    "name": "Yonatan",
+    "age": 25,
+    "height": 176,
+    "weight": 80,
+    "email": "yonatan@gmail.com",
+    "password": "1111"
+  },
+  {
+    "id": 2,
+    "name": "Sarah",
+    "age": 28,
+    "height": 165,
+    "weight": 60,
+    "email": "sarah@gmail.com",
+    "password": "1111"
+  },
+  {
+    "id": 3,
+    "name": "David",
+    "age": 30,
+    "height": 180,
+    "weight": 75,
+    "email": "david@gmail.com",
+    "password": "1111"
+  }
+]
