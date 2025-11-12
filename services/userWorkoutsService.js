@@ -45,26 +45,24 @@ export async function addWorkoutToUser(userId, workout) {
   }
 }
 
-// mark a workout as completed
-export async function markWorkoutCompleted(userId, exerciseId) {
+// mark a workout completed/not completed
+export async function markWorkoutCompleted(userId, exerciseId, completed) {
   try {
     const data = await fs.readFile(userWorkoutsPath, "utf8");
     const userWorkouts = JSON.parse(data);
 
-    const workoutIndex = userWorkouts.findIndex(
-      (workout) =>
-        workout.userId === userId && workout.exerciseId === exerciseId
+    const workoutIndex = userWorkouts[String(userId)].findIndex(
+      (workout) => String(workout.exerciseId) === String(exerciseId)
     );
 
     if (workoutIndex === -1) {
       throw new Error("Workout not found for this user");
     }
 
-    userWorkouts[workoutIndex].completed = true;
-    // userWorkouts[workoutIndex].completedDate = new Date().toISOString();
+    userWorkouts[String(userId)][workoutIndex].completed = completed;
 
     await fs.writeFile(userWorkoutsPath, JSON.stringify(userWorkouts, null, 2));
-    return userWorkouts[workoutIndex];
+    return userWorkouts[String(userId)][workoutIndex];
   } catch (error) {
     console.error("Error marking workout as completed:", error);
     throw error;

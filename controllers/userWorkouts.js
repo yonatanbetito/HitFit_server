@@ -25,13 +25,15 @@ export async function addWorkoutToUser(req, res) {
   }
 }
 
-// mark a workout as completed
+// mark a workout as completed/not completed
 export async function markWorkoutCompleted(req, res) {
   try {
-    const { userId, exerciseId } = req.body;
+    const { userId, exerciseId } = req.params;
+    const { completed } = req.body;
     const updatedWorkout = await userWorkoutsService.markWorkoutCompleted(
       userId,
-      exerciseId
+      exerciseId,
+      completed
     );
     res.json(updatedWorkout);
   } catch (error) {

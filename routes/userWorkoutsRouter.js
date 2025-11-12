@@ -12,8 +12,8 @@ const router = express.Router();
 router.get("/userWorkouts/:userId", getUserWorkouts);
 // add a workout to a user
 router.post("/userWorkouts", addWorkoutToUser);
-// mark a workout as completed
-router.put("/userWorkouts/complete", markWorkoutCompleted);
+// mark workout completed/not completed
+router.patch("/userWorkouts/:userId/:exerciseId/complete", markWorkoutCompleted);
 // delete a workout from a user
 router.delete("/userWorkouts/:userId/:exerciseId", deleteWorkoutFromUser)
 

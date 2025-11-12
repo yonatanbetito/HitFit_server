@@ -4,7 +4,7 @@
     "name": "Yonatan",
     "age": 25,
     "height": 176,
-    "weight": 80,
+    "weight": "76",
     "email": "yonatan@gmail.com",
     "password": "1111"
   },
@@ -20,9 +20,9 @@
   {
     "id": 3,
     "name": "David",
-    "age": 30,
+    "age": "25",
     "height": 180,
-    "weight": 75,
+    "weight": "65",
     "email": "david@gmail.com",
     "password": "1111"
   }

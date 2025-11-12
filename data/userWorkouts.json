@@ -10,18 +10,30 @@
         "5-8 rotate your foot counterclockwise (keep your feet on the floor)."
       ],
       "media": "/legs.png",
-      "completed": true
+      "completed": false
     },
     {
-      "exerciseId": 2,
-      "title": "Shoulder Press",
+      "exerciseId": 5,
+      "title": "Bicep Curls",
       "category": "Arms",
       "description": [
-        "Stand with your feet shoulder-width apart, holding a dumbbell in each hand at shoulder height, palms facing forward.",
-        "Press the weights upward until your arms are fully extended above your head.",
-        "Slowly lower the dumbbells back to shoulder height and repeat."
+        "Stand tall with your feet shoulder-width apart, holding a dumbbell in each hand.",
+        "Keep your elbows close to your torso and curl the weights upward while contracting your biceps.",
+        "Lower the weights slowly back to the starting position."
       ],
       "media": "/arms.png",
+      "completed": false
+    },
+    {
+      "exerciseId": 4,
+      "title": "Bodyweight Squat",
+      "category": "Legs",
+      "description": [
+        "Stand with your feet shoulder-width apart, arms straight in front of you.",
+        "Lower your hips back and down as if sitting on a chair, keeping your chest up.",
+        "Push through your heels to return to standing position."
+      ],
+      "media": "/legs.png",
       "completed": false
     }
   ],
@@ -48,31 +60,7 @@
         "Squeezing your abs and obliques, rotate your body and touch the toes of the opposite foot with your fingers."
       ],
       "media": "/back1.png",
-      "completed": false
-    },
-    {
-      "exerciseId": 6,
-      "title": "Glute Bridge",
-      "category": "Legs",
-      "description": [
-        "Lie on your back with knees bent and feet flat on the floor, hip-width apart.",
-        "Lift your hips toward the ceiling by squeezing your glutes.",
-        "Hold for a moment and slowly lower your hips back down."
-      ],
-      "media": "/legs.png",
-      "completed": false
-    },
-    {
-      "exerciseId": 2,
-      "title": "Shoulder Press",
-      "category": "Arms",
-      "description": [
-        "Stand with your feet shoulder-width apart, holding a dumbbell in each hand at shoulder height, palms facing forward.",
-        "Press the weights upward until your arms are fully extended above your head.",
-        "Slowly lower the dumbbells back to shoulder height and repeat."
-      ],
-      "media": "/arms.png",
-      "completed": false
+      "completed": true
     },
     {
       "exerciseId": 1,
